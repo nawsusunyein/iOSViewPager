@@ -19,8 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataSource = self;
-    self.webUrlLinks = @[@"https://www.google.com",@"https://www.facebook.com"];
-    NSArray *data = @[@"Google Google",@"Facebook Facebook"];
+    NSString *campaign = @"キャンペーン";
+    NSLog(@"campaign count %lu",(unsigned long)campaign.length);
+    
+    self.webUrlLinks = @[@"https://www.google.com",@"https://www.facebook.com",@"https://www.yahoo.com",@"https://www.google.com",@"https://www.facebook.com",@"https://www.yahoo.com",@"https://www.google.com",@"https://www.facebook.com"];
+    NSArray *data = @[@"News",@"キャンペーン",@"閲覧履歴",@"ランキング",@"新着",@"TSC",@"White",@"UL"];
     [self setTabData:data];
     // Do any additional setup after loading the view.
 }
