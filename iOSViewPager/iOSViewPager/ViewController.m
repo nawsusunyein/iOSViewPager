@@ -20,7 +20,7 @@
     [super viewDidLoad];
     self.dataSource = self;
     self.webUrlLinks = @[@"https://www.google.com",@"https://www.facebook.com",@"https://www.gmail.com"];
-    NSArray *data = @[@"News",@"キャンペーン",@"閲覧履歴"];
+    NSArray *data = @[@"News News News News News News News New40",@"キャンペーンキャンペーン キャンペーン キャンペーン キャンペーン キャンペ40",@"閲覧履歴 閲覧履歴 閲覧履歴 閲覧履歴 閲覧履歴 閲覧履歴 閲覧履歴 閲覧履歴40"];
     [self setTabData:data];
 }
 
