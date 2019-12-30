@@ -14,6 +14,7 @@
 @property NSString *urlString;
 @property (weak, nonatomic) IBOutlet UILabel *lblURLlink;
 @property (nonatomic) WKWebView *webView;
+@property (nonatomic) UIRefreshControl *refreshControl;
 @end
 
 @implementation WebViewController
@@ -31,6 +32,12 @@
     [super viewDidLoad];
     [self setupWebView];
     [self setURL:_urlString];
+    _refreshControl = [[UIRefreshControl alloc] init];
+       [_refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
+    [self.webView.scrollView addSubview:_refreshControl];
+    self.webView.scrollView.bounces = YES;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,6 +56,11 @@
     
 }
 
+-(void) refresh:(id)sender {
+    NSLog(@"Refreshing");
+    [self setURL:_urlString];
+    
+}
 
 - (void)setURL:(NSString *)requestURLString {
     NSURL *url = [[NSURL alloc] initWithString: requestURLString];
@@ -161,6 +173,7 @@ createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration
 // 読み込み完了
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     NSLog(@"読み込み完了");
+    [_refreshControl endRefreshing];
 }
 
 // 読み込み失敗
