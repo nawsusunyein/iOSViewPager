@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2399C94723BDDE2900788ECB /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2399C94623BDDE2900788ECB /* PagerViewController.m */; };
+		2399C94A23BDDE7300788ECB /* TabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2399C94923BDDE7300788ECB /* TabView.m */; };
+		2399C94D23BDDEB600788ECB /* TabContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2399C94C23BDDEB600788ECB /* TabContentView.m */; };
 		23B8841B23B9A03600AF1548 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B8841A23B9A03600AF1548 /* AppDelegate.m */; };
 		23B8842123B9A03600AF1548 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B8842023B9A03600AF1548 /* ViewController.m */; };
 		23B8842423B9A03600AF1548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B8842223B9A03600AF1548 /* Main.storyboard */; };
@@ -15,9 +18,6 @@
 		23B8842C23B9A03600AF1548 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B8842B23B9A03600AF1548 /* main.m */; };
 		23B8843623B9A03700AF1548 /* iOSViewPagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B8843523B9A03700AF1548 /* iOSViewPagerTests.m */; };
 		23B8844123B9A03700AF1548 /* iOSViewPagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B8844023B9A03700AF1548 /* iOSViewPagerUITests.m */; };
-		23B8845123B9AB7E00AF1548 /* TabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B8845023B9AB7E00AF1548 /* TabView.m */; };
-		23B8845423B9AB8F00AF1548 /* TabContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B8845323B9AB8F00AF1548 /* TabContentView.m */; };
-		23B8845723B9AB9C00AF1548 /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B8845623B9AB9C00AF1548 /* PagerViewController.m */; };
 		23B8845923B9AD7100AF1548 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B8845823B9AD7100AF1548 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2399C94623BDDE2900788ECB /* PagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PagerViewController.m; sourceTree = "<group>"; };
+		2399C94823BDDE5100788ECB /* PagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PagerViewController.h; sourceTree = "<group>"; };
+		2399C94923BDDE7300788ECB /* TabView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabView.m; sourceTree = "<group>"; };
+		2399C94B23BDDE9600788ECB /* TabView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabView.h; sourceTree = "<group>"; };
+		2399C94C23BDDEB600788ECB /* TabContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabContentView.m; sourceTree = "<group>"; };
+		2399C94E23BDDED400788ECB /* TabContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabContentView.h; sourceTree = "<group>"; };
 		23B8841623B9A03600AF1548 /* iOSViewPager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSViewPager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B8841923B9A03600AF1548 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		23B8841A23B9A03600AF1548 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -55,12 +61,6 @@
 		23B8843C23B9A03700AF1548 /* iOSViewPagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSViewPagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B8844023B9A03700AF1548 /* iOSViewPagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSViewPagerUITests.m; sourceTree = "<group>"; };
 		23B8844223B9A03700AF1548 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23B8844F23B9A38B00AF1548 /* TabView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TabView.h; path = ../../../../../PagerView/TabView.h; sourceTree = "<group>"; };
-		23B8845023B9AB7E00AF1548 /* TabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabView.m; path = ../../../../../PagerView/TabView.m; sourceTree = "<group>"; };
-		23B8845223B9AB8600AF1548 /* TabContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TabContentView.h; path = ../../../../../PagerView/TabContentView.h; sourceTree = "<group>"; };
-		23B8845323B9AB8F00AF1548 /* TabContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabContentView.m; path = ../../../../../PagerView/TabContentView.m; sourceTree = "<group>"; };
-		23B8845523B9AB9600AF1548 /* PagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PagerViewController.h; path = ../../../../../PagerView/PagerViewController.h; sourceTree = "<group>"; };
-		23B8845623B9AB9C00AF1548 /* PagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PagerViewController.m; path = ../../../../../PagerView/PagerViewController.m; sourceTree = "<group>"; };
 		23B8845823B9AD7100AF1548 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		23B8845A23B9AD9400AF1548 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +90,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2399C94523BDDE0D00788ECB /* PagerView */ = {
+			isa = PBXGroup;
+			children = (
+				2399C94623BDDE2900788ECB /* PagerViewController.m */,
+				2399C94823BDDE5100788ECB /* PagerViewController.h */,
+				2399C94923BDDE7300788ECB /* TabView.m */,
+				2399C94B23BDDE9600788ECB /* TabView.h */,
+				2399C94C23BDDEB600788ECB /* TabContentView.m */,
+				2399C94E23BDDED400788ECB /* TabContentView.h */,
+			);
+			path = PagerView;
+			sourceTree = "<group>";
+		};
 		23B8840D23B9A03600AF1548 = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +126,7 @@
 		23B8841823B9A03600AF1548 /* iOSViewPager */ = {
 			isa = PBXGroup;
 			children = (
-				23B8844E23B9A26F00AF1548 /* PagerView */,
+				2399C94523BDDE0D00788ECB /* PagerView */,
 				23B8841923B9A03600AF1548 /* AppDelegate.h */,
 				23B8841A23B9A03600AF1548 /* AppDelegate.m */,
 				23B8841F23B9A03600AF1548 /* ViewController.h */,
@@ -145,19 +158,6 @@
 				23B8844223B9A03700AF1548 /* Info.plist */,
 			);
 			path = iOSViewPagerUITests;
-			sourceTree = "<group>";
-		};
-		23B8844E23B9A26F00AF1548 /* PagerView */ = {
-			isa = PBXGroup;
-			children = (
-				23B8845623B9AB9C00AF1548 /* PagerViewController.m */,
-				23B8845523B9AB9600AF1548 /* PagerViewController.h */,
-				23B8845223B9AB8600AF1548 /* TabContentView.h */,
-				23B8845323B9AB8F00AF1548 /* TabContentView.m */,
-				23B8845023B9AB7E00AF1548 /* TabView.m */,
-				23B8844F23B9A38B00AF1548 /* TabView.h */,
-			);
-			path = PagerView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,12 +290,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2399C94A23BDDE7300788ECB /* TabView.m in Sources */,
 				23B8842123B9A03600AF1548 /* ViewController.m in Sources */,
+				2399C94723BDDE2900788ECB /* PagerViewController.m in Sources */,
 				23B8845923B9AD7100AF1548 /* WebViewController.m in Sources */,
-				23B8845423B9AB8F00AF1548 /* TabContentView.m in Sources */,
+				2399C94D23BDDEB600788ECB /* TabContentView.m in Sources */,
 				23B8841B23B9A03600AF1548 /* AppDelegate.m in Sources */,
-				23B8845123B9AB7E00AF1548 /* TabView.m in Sources */,
-				23B8845723B9AB9C00AF1548 /* PagerViewController.m in Sources */,
 				23B8842C23B9A03600AF1548 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
