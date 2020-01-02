@@ -9,8 +9,9 @@
 #import "OtherWebViewController.h"
 #import <WebKit/WebKit.h>
 
-@interface OtherWebViewController()
-@property (weak, nonatomic) IBOutlet UILabel *lblSubLink;
+@interface OtherWebViewController()<WKUIDelegate,WKNavigationDelegate>
+@property (weak, nonatomic) IBOutlet WKWebView *subWebView;
+
 
 @end
 
@@ -18,10 +19,25 @@
 -(void) viewDidLoad{
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self setUpWebView];
+    [self setURLRequest:self.urlString];
 }
 
 -(void) viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:true];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+-(void) setUpWebView{
+    self.subWebView.navigationDelegate = self;
+    self.subWebView.UIDelegate = self;
+}
+
+-(void) setURLRequest : (NSString *) requestUrlString{
+    NSURL *url = [[NSURL alloc] initWithString: requestUrlString];
+    NSURLRequest *request = [[NSURLRequest alloc] initWithURL: url
+                                                  cachePolicy: NSURLRequestUseProtocolCachePolicy
+                                              timeoutInterval: 5];
+    [self.subWebView loadRequest: request];
 }
 @end
