@@ -7,13 +7,14 @@
 //
 
 #import "WebViewController.h"
+#import "OtherWebViewController.h"
 #import <WebKit/WebKit.h>
 
 @interface WebViewController()<WKUIDelegate, WKNavigationDelegate>
 @property NSUInteger index;
 @property NSString *urlString;
-@property (weak, nonatomic) IBOutlet UILabel *lblURLlink;
 @property (nonatomic) WKWebView *webView;
+@property (strong,nonatomic) UIWindow *window;
 @end
 
 @implementation WebViewController
@@ -31,6 +32,11 @@
     [super viewDidLoad];
     [self setupWebView];
     [self setURL:_urlString];
+}
+
+-(void) viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -155,11 +161,35 @@ createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration
 #pragma mark - WKNavigationDelegate Methods
 /// ページ遷移前にアクセスを許可
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-    
     NSLog(@"アクセスURL：%@", navigationAction.request.URL.absoluteString);
-    
-    // どのページも許可
-    decisionHandler(WKNavigationActionPolicyAllow);
+  /* if ([navigationAction.request.URL.relativeString hasPrefix:@"https://"]) {
+       NSURL *url = navigationAction.request.URL;
+       [[UIApplication sharedApplication] openURL:url];
+       decisionHandler(WKNavigationActionPolicyCancel);
+       return;
+   }*/
+    if(navigationAction.navigationType == UIWebViewNavigationTypeLinkClicked){
+        NSLog(@"here entered");
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        OtherWebViewController *otherWebViewController = (OtherWebViewController *)[storyboard instantiateViewControllerWithIdentifier:@"OtherWebViewController"];
+       // UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:otherWebViewController];
+        
+        [self.navigationController pushViewController:otherWebViewController animated:YES];
+        decisionHandler(WKNavigationActionPolicyCancel);
+       // self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+           
+      //     OtherWebViewController *otherWebViewController = [[OtherWebViewController alloc] init];
+      //  [self.navigationController pushViewController:otherWebViewController animated:YES];
+          // self.window.rootViewController = otherWebViewController;
+           
+         //  self.window.backgroundColor = [UIColor whiteColor];
+         //  [self.window makeKeyAndVisible];
+        
+    }else{
+        // どのページも許可
+        decisionHandler(WKNavigationActionPolicyAllow);
+        NSLog(@"アクセスURL：%@", navigationAction.request.URL.absoluteString);
+    }
 }
 
 // 読み込み開始

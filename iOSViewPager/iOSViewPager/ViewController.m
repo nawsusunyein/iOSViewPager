@@ -12,6 +12,7 @@
 
 @interface ViewController ()<ViewPagerDataSource>
 @property (nonatomic,strong) NSArray *webUrlLinks;
+
 @end
 
 @implementation ViewController
@@ -22,11 +23,11 @@
     self.webUrlLinks = @[@"https://www.google.com",@"https://www.facebook.com",@"https://www.yahoo.com",@"https://www.google.com",@"https://www.facebook.com",@"https://www.yahoo.com",@"https://www.google.com",@"https://www.facebook.com"];
     NSArray *data = @[@"News",@"キャンペーン",@"閲覧履歴",@"ランキング",@"新着",@"TSC",@"White",@"UL"];
     [self setTabData:data];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (UIViewController *)viewPager:(UIViewController *)viewPager contentViewControllerForTabAtIndex:(NSUInteger)index {
     WebViewController *controller = [[WebViewController alloc]init:index link:self.webUrlLinks[index]];
-    
     return controller;
 }
 

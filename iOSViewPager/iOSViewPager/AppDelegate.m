@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "OtherWebViewController.h"
 
 @interface AppDelegate ()
 

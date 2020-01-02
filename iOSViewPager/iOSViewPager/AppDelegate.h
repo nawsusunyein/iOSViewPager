@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+
+@class OtherWebViewController;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong,nonatomic) UIWindow *window;
+@property (strong,nonatomic) OtherWebViewController *otherWebView;
 
 @end
 

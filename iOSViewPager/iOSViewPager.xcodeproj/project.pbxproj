@@ -10,6 +10,7 @@
 		2399C8EB23BD991700788ECB /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2399C8EA23BD991700788ECB /* PagerViewController.m */; };
 		2399C8EE23BD996D00788ECB /* TabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2399C8ED23BD996D00788ECB /* TabView.m */; };
 		2399C8F123BD99CA00788ECB /* TabContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2399C8F023BD99CA00788ECB /* TabContentView.m */; };
+		2399C8F423BDA0E600788ECB /* OtherWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2399C8F323BDA0E600788ECB /* OtherWebViewController.m */; };
 		23B8841B23B9A03600AF1548 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B8841A23B9A03600AF1548 /* AppDelegate.m */; };
 		23B8842123B9A03600AF1548 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B8842023B9A03600AF1548 /* ViewController.m */; };
 		23B8842423B9A03600AF1548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B8842223B9A03600AF1548 /* Main.storyboard */; };
@@ -45,6 +46,8 @@
 		2399C8EF23BD998800788ECB /* TabView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabView.h; sourceTree = "<group>"; };
 		2399C8F023BD99CA00788ECB /* TabContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabContentView.m; sourceTree = "<group>"; };
 		2399C8F223BD99D600788ECB /* TabContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabContentView.h; sourceTree = "<group>"; };
+		2399C8F323BDA0E600788ECB /* OtherWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherWebViewController.m; sourceTree = "<group>"; };
+		2399C8F523BDA0F600788ECB /* OtherWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherWebViewController.h; sourceTree = "<group>"; };
 		23B8841623B9A03600AF1548 /* iOSViewPager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSViewPager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B8841923B9A03600AF1548 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		23B8841A23B9A03600AF1548 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -138,6 +141,8 @@
 				23B8842B23B9A03600AF1548 /* main.m */,
 				23B8845823B9AD7100AF1548 /* WebViewController.m */,
 				23B8845A23B9AD9400AF1548 /* WebViewController.h */,
+				2399C8F323BDA0E600788ECB /* OtherWebViewController.m */,
+				2399C8F523BDA0F600788ECB /* OtherWebViewController.h */,
 			);
 			path = iOSViewPager;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 			files = (
 				2399C8EE23BD996D00788ECB /* TabView.m in Sources */,
 				23B8842123B9A03600AF1548 /* ViewController.m in Sources */,
+				2399C8F423BDA0E600788ECB /* OtherWebViewController.m in Sources */,
 				2399C8EB23BD991700788ECB /* PagerViewController.m in Sources */,
 				23B8845923B9AD7100AF1548 /* WebViewController.m in Sources */,
 				2399C8F123BD99CA00788ECB /* TabContentView.m in Sources */,
