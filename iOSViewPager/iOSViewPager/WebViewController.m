@@ -143,6 +143,15 @@ createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration
     return nil;
 }
 
+- (BOOL)webView:(WKWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    if (navigationType == UIWebViewNavigationTypeLinkClicked ) {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com"] options:@{} completionHandler:nil];
+        return NO;
+    }
+
+    return YES;
+}
+
 #pragma mark - WKNavigationDelegate Methods
 /// ページ遷移前にアクセスを許可
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
