@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2399C96F23BDE39C00788ECB /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2399C96E23BDE39C00788ECB /* PagerViewController.m */; };
+		2399C97323BDE3E200788ECB /* TabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2399C97223BDE3E200788ECB /* TabView.m */; };
+		2399C97623BDE41800788ECB /* TabContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2399C97523BDE41800788ECB /* TabContentView.m */; };
 		23B8841B23B9A03600AF1548 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B8841A23B9A03600AF1548 /* AppDelegate.m */; };
 		23B8842123B9A03600AF1548 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B8842023B9A03600AF1548 /* ViewController.m */; };
 		23B8842423B9A03600AF1548 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23B8842223B9A03600AF1548 /* Main.storyboard */; };
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2399C96E23BDE39C00788ECB /* PagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PagerViewController.m; sourceTree = "<group>"; };
+		2399C97123BDE3C800788ECB /* PagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PagerViewController.h; sourceTree = "<group>"; };
+		2399C97223BDE3E200788ECB /* TabView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabView.m; sourceTree = "<group>"; };
+		2399C97423BDE3F800788ECB /* TabView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabView.h; sourceTree = "<group>"; };
+		2399C97523BDE41800788ECB /* TabContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabContentView.m; sourceTree = "<group>"; };
+		2399C97723BDE42A00788ECB /* TabContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabContentView.h; sourceTree = "<group>"; };
 		23B8841623B9A03600AF1548 /* iOSViewPager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSViewPager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23B8841923B9A03600AF1548 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		23B8841A23B9A03600AF1548 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,6 +90,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2399C96D23BDE37F00788ECB /* PagerView */ = {
+			isa = PBXGroup;
+			children = (
+				2399C96E23BDE39C00788ECB /* PagerViewController.m */,
+				2399C97123BDE3C800788ECB /* PagerViewController.h */,
+				2399C97223BDE3E200788ECB /* TabView.m */,
+				2399C97423BDE3F800788ECB /* TabView.h */,
+				2399C97523BDE41800788ECB /* TabContentView.m */,
+				2399C97723BDE42A00788ECB /* TabContentView.h */,
+			);
+			path = PagerView;
+			sourceTree = "<group>";
+		};
 		23B8840D23B9A03600AF1548 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +126,7 @@
 		23B8841823B9A03600AF1548 /* iOSViewPager */ = {
 			isa = PBXGroup;
 			children = (
+				2399C96D23BDE37F00788ECB /* PagerView */,
 				23B8841923B9A03600AF1548 /* AppDelegate.h */,
 				23B8841A23B9A03600AF1548 /* AppDelegate.m */,
 				23B8841F23B9A03600AF1548 /* ViewController.h */,
@@ -267,8 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2399C97323BDE3E200788ECB /* TabView.m in Sources */,
 				23B8842123B9A03600AF1548 /* ViewController.m in Sources */,
+				2399C96F23BDE39C00788ECB /* PagerViewController.m in Sources */,
 				23B8845923B9AD7100AF1548 /* WebViewController.m in Sources */,
+				2399C97623BDE41800788ECB /* TabContentView.m in Sources */,
 				23B8841B23B9A03600AF1548 /* AppDelegate.m in Sources */,
 				23B8842C23B9A03600AF1548 /* main.m in Sources */,
 			);
