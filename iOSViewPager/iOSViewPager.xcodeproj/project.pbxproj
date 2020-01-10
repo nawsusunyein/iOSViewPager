@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2376D14F23C88A07005A9CC3 /* OtherTwoWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376D14E23C88A07005A9CC3 /* OtherTwoWebViewController.m */; };
 		2399C8EB23BD991700788ECB /* PagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2399C8EA23BD991700788ECB /* PagerViewController.m */; };
 		2399C8EE23BD996D00788ECB /* TabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2399C8ED23BD996D00788ECB /* TabView.m */; };
 		2399C8F123BD99CA00788ECB /* TabContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2399C8F023BD99CA00788ECB /* TabContentView.m */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2376D14E23C88A07005A9CC3 /* OtherTwoWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OtherTwoWebViewController.m; sourceTree = "<group>"; };
+		2376D15023C88A21005A9CC3 /* OtherTwoWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OtherTwoWebViewController.h; sourceTree = "<group>"; };
 		2399C8EA23BD991700788ECB /* PagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PagerViewController.m; sourceTree = "<group>"; };
 		2399C8EC23BD992900788ECB /* PagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PagerViewController.h; sourceTree = "<group>"; };
 		2399C8ED23BD996D00788ECB /* TabView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabView.m; sourceTree = "<group>"; };
@@ -139,10 +142,12 @@
 				23B8842723B9A03600AF1548 /* LaunchScreen.storyboard */,
 				23B8842A23B9A03600AF1548 /* Info.plist */,
 				23B8842B23B9A03600AF1548 /* main.m */,
+				2376D14E23C88A07005A9CC3 /* OtherTwoWebViewController.m */,
 				23B8845823B9AD7100AF1548 /* WebViewController.m */,
 				23B8845A23B9AD9400AF1548 /* WebViewController.h */,
 				2399C8F323BDA0E600788ECB /* OtherWebViewController.m */,
 				2399C8F523BDA0F600788ECB /* OtherWebViewController.h */,
+				2376D15023C88A21005A9CC3 /* OtherTwoWebViewController.h */,
 			);
 			path = iOSViewPager;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2376D14F23C88A07005A9CC3 /* OtherTwoWebViewController.m in Sources */,
 				2399C8EE23BD996D00788ECB /* TabView.m in Sources */,
 				23B8842123B9A03600AF1548 /* ViewController.m in Sources */,
 				2399C8F423BDA0E600788ECB /* OtherWebViewController.m in Sources */,

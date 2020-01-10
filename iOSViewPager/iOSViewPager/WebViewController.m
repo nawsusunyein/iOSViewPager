@@ -168,7 +168,7 @@ createWebViewWithConfiguration:(WKWebViewConfiguration *)configuration
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         OtherWebViewController *otherWebViewController = (OtherWebViewController *)[storyboard instantiateViewControllerWithIdentifier:@"OtherWebViewController"];
         //OtherWebViewController *otherWebViewController = [[OtherWebViewController alloc] init];
-        otherWebViewController.urlString = @"https://www.google.com";
+        otherWebViewController.urlString = navigationAction.request.URL.absoluteString;
         [self.navigationController pushViewController:otherWebViewController animated:YES];
         decisionHandler(WKNavigationActionPolicyCancel);
       

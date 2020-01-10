@@ -1,22 +1,24 @@
 //
-//  OtherWebViewController.m
+//  OtherTwoWebViewController.m
 //  iOSViewPager
 //
-//  Created by techfun on 2020/01/02.
+//  Created by techfun on 2020/01/10.
 //  Copyright © 2020 Naw Su Su Nyein. All rights reserved.
 //
 
-#import "OtherWebViewController.h"
-#import "OtherTwoWebViewController.h"
-#import <WebKit/WebKit.h>
 
-@interface OtherWebViewController()<WKUIDelegate,WKNavigationDelegate>
-@property (weak, nonatomic) IBOutlet WKWebView *subWebView;
+#import <WebKit/WebKit.h>
+#import "OtherTwoWebViewController.h"
+#import "OtherWebViewController.h"
+
+@interface OtherTwoWebViewController()<WKUIDelegate,WKNavigationDelegate>
+@property (weak, nonatomic) IBOutlet WKWebView *otherWebTwoView;
+
 
 
 @end
 
-@implementation OtherWebViewController
+@implementation OtherTwoWebViewController
 -(void) viewDidLoad{
     [super viewDidLoad];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
@@ -30,9 +32,9 @@
 }
 
 -(void) setUpWebView{
-    self.subWebView.navigationDelegate = self;
-    self.subWebView.UIDelegate = self;
-    self.subWebView.allowsBackForwardNavigationGestures = YES;
+    self.otherWebTwoView.navigationDelegate = self;
+    self.otherWebTwoView.UIDelegate = self;
+    self.otherWebTwoView.allowsBackForwardNavigationGestures = YES;
 }
 
 -(void) setURLRequest : (NSString *) requestUrlString{
@@ -40,7 +42,7 @@
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL: url
                                                   cachePolicy: NSURLRequestUseProtocolCachePolicy
                                               timeoutInterval: 5];
-    [self.subWebView loadRequest: request];
+    [self.otherWebTwoView loadRequest: request];
 }
 
 #pragma mark - WKNavigationDelegate Methods
@@ -51,11 +53,10 @@
         NSLog(@"here entered");
         
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        OtherTwoWebViewController *otherTwoWebViewController = (OtherTwoWebViewController *)[storyboard instantiateViewControllerWithIdentifier:@"OtherTwoWebViewController"];
+        OtherWebViewController *otherWebViewController = (OtherWebViewController *)[storyboard instantiateViewControllerWithIdentifier:@"OtherWebViewController"];
         //OtherWebViewController *otherWebViewController = [[OtherWebViewController alloc] init];
-        otherTwoWebViewController.urlString = navigationAction.request.URL.absoluteString;
-        [self.navigationController pushViewController:otherTwoWebViewController animated:YES];
-        
+        otherWebViewController.urlString = navigationAction.request.URL.absoluteString;
+        [self.navigationController pushViewController:otherWebViewController animated:YES];
         decisionHandler(WKNavigationActionPolicyCancel);
       
         
