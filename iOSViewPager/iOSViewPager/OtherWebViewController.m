@@ -7,7 +7,6 @@
 //
 
 #import "OtherWebViewController.h"
-#import "OtherTwoWebViewController.h"
 #import <WebKit/WebKit.h>
 
 @interface OtherWebViewController()<WKUIDelegate,WKNavigationDelegate>
@@ -26,7 +25,7 @@
 
 -(void) viewDidDisappear:(BOOL)animated{
     [super viewDidDisappear:true];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+   // [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 -(void) setUpWebView{
@@ -51,13 +50,10 @@
         NSLog(@"here entered");
         
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        OtherTwoWebViewController *otherTwoWebViewController = (OtherTwoWebViewController *)[storyboard instantiateViewControllerWithIdentifier:@"OtherTwoWebViewController"];
-        //OtherWebViewController *otherWebViewController = [[OtherWebViewController alloc] init];
-        otherTwoWebViewController.urlString = navigationAction.request.URL.absoluteString;
-        [self.navigationController pushViewController:otherTwoWebViewController animated:YES];
-        
+        OtherWebViewController *otherWebViewController = (OtherWebViewController *)[storyboard instantiateViewControllerWithIdentifier:@"OtherWebViewController"];
+        otherWebViewController.urlString = navigationAction.request.URL.absoluteString;
+        [self.navigationController pushViewController:otherWebViewController animated:YES];
         decisionHandler(WKNavigationActionPolicyCancel);
-      
         
     }else{
         // どのページも許可

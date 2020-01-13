@@ -58,40 +58,6 @@
             </objects>
             <point key="canvasLocation" x="1932" y="123"/>
         </scene>
-        <!--Other Two Web View Controller-->
-        <scene sceneID="sAP-hz-aer">
-            <objects>
-                <viewController storyboardIdentifier="OtherTwoWebViewController" id="c8m-B8-tyM" customClass="OtherTwoWebViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ApO-tL-tTe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PlT-5K-SKj">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <wkWebViewConfiguration key="configuration">
-                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                    <wkPreferences key="preferences"/>
-                                </wkWebViewConfiguration>
-                            </wkWebView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="PlT-5K-SKj" firstAttribute="leading" secondItem="WS1-Jv-TMo" secondAttribute="leading" id="Q2L-D1-t7i"/>
-                            <constraint firstItem="PlT-5K-SKj" firstAttribute="trailing" secondItem="WS1-Jv-TMo" secondAttribute="trailing" id="XCX-fw-Ld8"/>
-                            <constraint firstAttribute="bottom" secondItem="PlT-5K-SKj" secondAttribute="bottom" id="dzr-BH-8ux"/>
-                            <constraint firstItem="PlT-5K-SKj" firstAttribute="top" secondItem="WS1-Jv-TMo" secondAttribute="top" id="me9-uv-45d"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="WS1-Jv-TMo"/>
-                    </view>
-                    <connections>
-                        <outlet property="otherWebTwoView" destination="PlT-5K-SKj" id="NVp-F2-3nM"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aaJ-D3-IvJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2952.1739130434785" y="121.875"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Aoj-m5-u9C">
             <objects>
